@@ -7,7 +7,17 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DesignStrategyApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DesignStrategyApplication.class, args);
-    }
+        Context context = new Context();
 
+        context.SetiTrie(new TrieBulle());
+        context.TrieTable();
+        System.out.println("========================");
+
+        context.SetiTrie(new TrieInsertion());
+        context.TrieTable();
+        System.out.println("========================");
+
+        context.SetiTrie(new TrieSlection());
+        context.TrieTable();
+    }
 }
